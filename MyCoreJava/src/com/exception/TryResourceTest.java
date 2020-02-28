@@ -7,7 +7,7 @@ class CustomAutoClosable implements AutoCloseable
     void setValue(int value)
     {
     	if (value<0)
-    		throw new ArithmeticException() ;
+    		throw new ArrayIndexOutOfBoundsException();
     	else
     	this.value=value;
     }
@@ -31,7 +31,7 @@ public class TryResourceTest {
 		
 		try(CustomAutoClosable a=new CustomAutoClosable())
 		{
-			a.setValue(10);
+			a.setValue(-10);
 			System.out.println("Value = "+a.getValue());
 			
 		}

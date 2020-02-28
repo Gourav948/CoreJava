@@ -1,6 +1,7 @@
 package com.exception;
 
 import java.io.*;
+@SuppressWarnings("serial")
 class InsufficientBalanceException extends Exception
 {
 	private String message;
@@ -32,6 +33,8 @@ class Account
 	{
 		if (balance<amount)
 			throw new InsufficientBalanceException();
+		else
+			balance-=amount;
 	   return "New balance"+balance;
 	}
 	

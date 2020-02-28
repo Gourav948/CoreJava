@@ -24,18 +24,13 @@ public class FileAccountTest {
 		fos.close();
 		FileInputStream fis= new FileInputStream(file);
 		DataInputStream dis =new DataInputStream(fis);
+		for(int i=0;i<3;i++)
+		{
 		System.out.println(dis.readInt());
 		System.out.println(dis.readDouble());
 		System.out.println(dis.readUTF());
 		System.out.println();
-		System.out.println(dis.readInt());
-		System.out.println(dis.readDouble());
-		System.out.println(dis.readUTF());
-		System.out.println();
-		System.out.println(dis.readInt());
-		System.out.println(dis.readDouble());
-		System.out.println(dis.readUTF());
-		
+		}
 		
 		
 	}
