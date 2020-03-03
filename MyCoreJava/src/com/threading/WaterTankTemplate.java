@@ -93,7 +93,7 @@ Thread controller =new Thread(new Runnable() {
 });
 inlet.start();
 outlet.start();
-controller.setDaemon(true);
+//controller.setDaemon(true);
 controller.start();
 	
 	}

@@ -17,9 +17,9 @@ public class JdbcMySqlPreapedTest
 			System.out.println(rs.getInt("Id")+"--"+rs.getString("name")+"--"+rs.getDouble("salary"));
 		}
 		PreparedStatement pstmt=dbcon.prepareStatement("INSERT into emp1 (Id,name,salary) VALUES (?,?,?)");
-		pstmt.setInt(1, 601);
-		pstmt.setString(2, "Don");
-		pstmt.setInt(3, 999999);
+		pstmt.setInt(1, 801);
+		pstmt.setString(2, "Rani");
+		pstmt.setInt(3, 22222);
 		System.out.println("After adding Don");
 		pstmt.executeUpdate();
 		PreparedStatement pstmt1=dbcon.prepareStatement("UPDATE emp1 SET name = ?, salary= ? WHERE Id = 101");
@@ -32,6 +32,7 @@ public class JdbcMySqlPreapedTest
 		System.out.println("After dELETING 501");
 		System.out.println("Entering into data  Table");
 		pstmt2.executeUpdate();
+		
 		ResultSet rs2=stmt.executeQuery("SELECT * FROM emp1");
 		while(rs2.next())
 		{

@@ -61,13 +61,11 @@ public class EmployeeHashMapTest
 		while(itr.hasNext()) 
 		{
 			Employee ee = itr.next();
-			System.out.println(ee);
+			System.out.println("\n");
+			System.out.println(hm.get(ee));
+			System.out.println("\n\n");
 		}
-		System.out.println();
-		for(Employee ee : hm.keySet()) 
-       { 
-           System.out.println(hm.get(ee)); 
-       } 
+		
 	}
 
 }
