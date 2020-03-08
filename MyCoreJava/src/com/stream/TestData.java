@@ -30,7 +30,7 @@ public class TestData {
 		newsList.add(new News(3, "Sara", "Daji", "Good article"));
 		newsList.add(new News(4, "Gourav", "Bipin", "This is not relevant"));
 		newsList.add(new News(3, "Snigdha", "Anand", "hii whats your Budget"));
-		
+		newsList.add(new News(4, "Tom", "Narang", "Last Comment"));
 		return newsList;
 	}
 	public static void printNews(List<News> newsList) {

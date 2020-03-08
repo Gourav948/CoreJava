@@ -23,12 +23,13 @@ public class Assignment
 		
 		//Assignment2
 		System.out.println("\t\tFruit List in colourWise");
-		Map<String,List<Fruit>> colourWiseFruit= TestData.getAllFruits().stream().collect(groupingBy(Fruit::getColor));
-		for(String str:colourWiseFruit.keySet())
+		/*Map<String,List<Fruit>> colourWiseFruit= */
+		TestData.getAllFruits().stream().collect(groupingBy(Fruit::getColor)).entrySet().forEach(System.out::println);
+		/*for(String str:colourWiseFruit.keySet())
 		{
 			System.out.print(str);
 			System.out.println(colourWiseFruit.get(str));
-		}
+		}*/
 		System.out.println("\n\n");
 		
 		//Assignment3
